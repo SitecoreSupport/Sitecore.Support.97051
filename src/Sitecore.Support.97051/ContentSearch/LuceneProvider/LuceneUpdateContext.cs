@@ -18,8 +18,7 @@
 
         private void ReplaceLockScope(ILuceneProviderIndex index)
         {
-            LockScope scope = (LockScope)this.scope;
-            this.scope = new LockScope(index.Directory, "write.lock");
+            base.scope = new LockScope(index.Directory, "write.lock");
         }
     }
 }
